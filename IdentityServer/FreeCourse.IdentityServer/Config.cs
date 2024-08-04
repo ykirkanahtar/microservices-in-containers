@@ -19,6 +19,10 @@ public static class Config
         {
             Scopes = { "basket_fullpermission" }
         },
+        new("resource_discount")
+        {
+            Scopes = { "discount_fullpermission" }
+        },
         new(IdentityServerConstants.LocalApi.ScopeName)
     };
 
@@ -43,6 +47,7 @@ public static class Config
             new("catalog_fullpermission", "Catalog api için ful erişim"),
             new("photo_stock_fullpermission", "Photo Stock api için ful erişim"),
             new("basket_fullpermission", "Basket api için ful erişim"),
+            new("discount_fullpermission", "Discount api için ful erişim"),
             new(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -78,6 +83,7 @@ public static class Config
                 AllowedScopes =
                 {
                     "basket_fullpermission",
+                    "discount_fullpermission",
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,

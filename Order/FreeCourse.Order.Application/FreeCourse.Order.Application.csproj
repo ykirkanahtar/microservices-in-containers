@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FreeCourse.Order.Domain\FreeCourse.Order.Domain.csproj" />
+      <ProjectReference Include="..\FreeCourse.Order.Infrastructure\FreeCourse.Order.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
