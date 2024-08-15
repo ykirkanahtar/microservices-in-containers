@@ -1,0 +1,2 @@
+dotnet ef migrations add InitialCreate --project "/Users/yunus/GoogleDrive/Documents/Projects/MicroServiceSamp
+le/Services/Order/FreeCourse.Services.Order.Infrastructure/FreeCourse.Services.Order.Infrastructure.csproj" --startup-project "/Users/yunus/GoogleDrive/Documents/Projects/MicroServiceSample/Services/Order/FreeCourse.Services.Order.Api/FreeCourse.Services.Order.Api.csproj"

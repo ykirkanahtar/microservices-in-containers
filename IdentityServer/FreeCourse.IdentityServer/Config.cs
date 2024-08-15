@@ -23,6 +23,14 @@ public static class Config
         {
             Scopes = { "discount_fullpermission" }
         },
+        new("resource_order")
+        {
+          Scopes  = { "order_fullpermission" }
+        },
+        new("resource_payment")
+        {
+            Scopes  = { "payment_fullpermission" }
+        },
         new(IdentityServerConstants.LocalApi.ScopeName)
     };
 
@@ -48,6 +56,8 @@ public static class Config
             new("photo_stock_fullpermission", "Photo Stock api için ful erişim"),
             new("basket_fullpermission", "Basket api için ful erişim"),
             new("discount_fullpermission", "Discount api için ful erişim"),
+            new("order_fullpermission", "Order api için ful erişim"),
+            new("payment_fullpermission", "Payment api için ful erişim"),
             new(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -84,6 +94,8 @@ public static class Config
                 {
                     "basket_fullpermission",
                     "discount_fullpermission",
+                    "order_fullpermission",
+                    "payment_fullpermission",
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
@@ -97,8 +109,4 @@ public static class Config
                 RefreshTokenUsage = TokenUsage.ReUse
             }
         };
-    
-    
-    
-    
 }
