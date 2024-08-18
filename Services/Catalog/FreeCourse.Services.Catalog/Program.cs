@@ -1,3 +1,4 @@
+using FreeCourse.Services.Catalog.Dtos;
 using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Services.Catalog.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -36,6 +37,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 );
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+    var categoryService = serviceProvider.GetRequiredService<ICategoryService>();
+    if ((await categoryService.GetAllAsync()).Data.Any() == false)
+    {
+        await categoryService.CreateAsync(new CategoryCreateDto
+        {
+            Name = "Asp.Net Core",
+        });
+        
+        await categoryService.CreateAsync(new CategoryCreateDto
+        {
+            Name = "Asp.Net Core Web Api",
+        });
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

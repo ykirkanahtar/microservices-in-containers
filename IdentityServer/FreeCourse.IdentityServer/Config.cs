@@ -31,6 +31,10 @@ public static class Config
         {
             Scopes  = { "payment_fullpermission" }
         },
+        new("resource_gateway")
+        {
+            Scopes  = { "gateway_fullpermission" }
+        },        
         new(IdentityServerConstants.LocalApi.ScopeName)
     };
 
@@ -58,6 +62,7 @@ public static class Config
             new("discount_fullpermission", "Discount api için ful erişim"),
             new("order_fullpermission", "Order api için ful erişim"),
             new("payment_fullpermission", "Payment api için ful erişim"),
+            new("gateway_fullpermission", "Gateway api için ful erişim"),
             new(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -77,6 +82,7 @@ public static class Config
                 {
                     "catalog_fullpermission",
                     "photo_stock_fullpermission",
+                    "gateway_fullpermission",
                     IdentityServerConstants.LocalApi.ScopeName
                 }
             },
